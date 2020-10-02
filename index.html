@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+    <script>
+        // Begin with a function called computerPlay that will randomly return either 'Rock', 'Paper' or 'Scissors'.
+        // We'll use this function in the game to make the computer's play.
+
+        let playerSelection = parseString(prompt("Please select Rock Paper or Scissors:"));
+        let computerSelection = computerPlay()
+
+        function computerPlay() {
+            let rps = Math.floor(Math.random() * 3);
+            if (rps == 0) {
+                return "rock"
+            } else if (rps == 1) {
+                return "paper"
+            } else {
+                return "scissors"
+            }
+        }
+        
+        // Write a function that plays a single round of Rock Paper Scissors. The function should take two parameters -
+        // the playerSelection and computer Selection - and then return a string that declares the winner of the round 
+        // like so: "You Lose! Paper beats Rock"
+            // Make your function case insensetive (so users can input rock, ROCK, RocK or any other variation)
+
+        // You want to return the results of this function call, not console.log() them. 
+
+        function playGame(playerSelection, computerSelection) {
+            if (playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "rock") {
+                return "It's a tie!"
+            } else if (playerSelection.toLowerCase === "paper" && computerSelection.toLowerCase() === "rock") {
+                return "You win! Paper beats Rock"
+            } else if (playerSelection.toLowerCase === "scissors" && computerSelection.toLowerCase() === "rock") {
+                return "You lose! Rock beats Scissors"
+            }
+            
+    }
+    </script>
+</html>
