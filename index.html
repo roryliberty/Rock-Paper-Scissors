@@ -12,7 +12,7 @@
 
         function playerPlay() {
             let playerSelection = prompt("Please enter Rock Paper or Scissors:").toLowerCase();
-            if (playerSelection != "rock" && playerSelection && "paper" && playerSelection != "scissors") {
+            if (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors") {
                 window.confirm("Try again.");
             } else {
                 return playerSelection
@@ -32,8 +32,8 @@
 
         function playRound(playerSelection, computerSelection) {
             // Make funcion case insensitive
-            playerSelection = playerSelection.toLowerCase();
-            computerSelection = computerSelection.toLowerCase();
+             //let playerSelection = playerSelection;
+             //let computerSelection = computerSelection;
 
             if (playerSelection === "rock" && computerSelection === "rock") {
                 return "It's a tie!"
